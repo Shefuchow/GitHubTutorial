@@ -47,4 +47,18 @@ loadButton.addEventListener("click", function() {
     });
 });
 
+getRealTimeUpdates = function() {
+    docRef.onSnapshot(function(doc) {
+        if (doc && doc.exists) {
+            const myData = doc.data();
+            outputHeader.innerText = "Hot Dog Status: " + myData.hotDogStatus;
+        }
+    }).catch(function(error) {
+        console.log("We Got an Error", error);
+    });
+}
+
+getRealTimeUpdates();
+
+
 //})();
