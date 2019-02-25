@@ -2,7 +2,7 @@
 
 // Initialize Firebase
 var config = {
-    apiKey: "AIzaSyCbnrAPtUv1vUXa7SUdlwZAZdy6dYZTG4A",
+    apiKey: "YIKES HAHAHA",
     authDomain: "hotdogsandwich-be39e.firebaseapp.com",
     databaseURL: "https://hotdogsandwich-be39e.firebaseio.com",
     projectId: "hotdogsandwich-be39e",
