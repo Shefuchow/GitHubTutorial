@@ -47,6 +47,8 @@ loadButton.addEventListener("click", function() {
     });
 });
 
+<<
+<< << < HEAD
 getRealTimeUpdates = function() {
     docRef.onSnapshot(function(doc) {
         if (doc && doc.exists) {
@@ -62,3 +64,8 @@ getRealTimeUpdates();
 
 
 //})();
+===
+=== =
+//})();
+>>>
+>>> > 6 c88bc828d0b545f32219dcb51338f5d17bbcf2f
