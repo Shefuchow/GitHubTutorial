@@ -1,5 +1,10 @@
-// var and hoisting
+// Author: MasterShefu
+// Date: Jan 20th 2020
+// Purpose: ES6 study to move onto React Native
 
+// -------------------------------- S Y N T A X ---------------------------------- //
+
+// var and hoisting
 function getClothing(isCold) {
     if (isCold) {
         var freezing = 'Grab a jacket!';
@@ -143,3 +148,68 @@ const produce = [...fruits, ...vegetables];
 console.log(produce);
 
 // Rest parameter, ( ... ), allows you to represent an indefinite number of elements as an array.
+const order = [20.17, 18.67, 1.50, "cheese", "eggs", "milk", "bread"];
+const [total, subtotal, tax, ...items] = order;
+console.log(total, subtotal, tax, items);
+
+//Variadic functions are functions that take an indefinite number of arguments.
+function sum(...nums) {
+    let total = 0;
+    for (const num of nums) {
+        total += num;
+    }
+    return total;
+}
+sum(1, 2);
+sum(10, 36, 7, 84, 90, 110);
+sum(-23, 3000, 575000);
+
+function average(...nums) {
+    if (nums.length == 0)
+        return 0;
+    let total = 0;
+    for (num of nums) {
+        total += num;
+    }
+    return total / nums.length;
+}
+console.log(average(2, 6));
+console.log(average(2, 3, 3, 5, 7, 10));
+console.log(average(7, 1432, 12, 13, 100));
+console.log(average());
+
+// ----------------------------------- F U N C T I O N S ------------------------------------- //
+
+// Arrow Functions
+const upperizedNames = ['Farrin', 'Kagure', 'Asser'].map(
+    name => name.toUpperCase()
+);
+
+// Regular functions are either function declarations/function expressions, 
+// Arrow functions are always expressions. ->:
+// stored in a variable,
+// passed as an argument to a function,
+// stored in an object's property.
+
+const greet = name => `Hello ${name}!`;
+console.log(greet("sefath"));
+
+// empty parameter list requires parentheses
+const sayHi = () => console.log('Hello world!');
+sayHi();
+
+// multiple parameters requires parentheses
+const orderIceCream = (flavor, cone) => console.log(`Here's your ${flavor} ice cream in a ${cone} cone.`);
+orderIceCream('chocolate', 'waffle');
+
+// Above was concise body syntax, with one line of code in the function body
+
+// Multiple lines need block body syntax
+
+const upperizedNames = ['Farrin', 'Kagure', 'Asser'].map(name => {
+    name = name.toUpperCase();
+    return `${name} has ${name.length} characters in their name`;
+});
+
+// it uses curly braces to wrap the function body
+// and a return statement needs to be used to actually return something from the function.
